@@ -13,8 +13,11 @@ public class Servidor {
 	Musica m1;
 	ServerSocket serverSocket;
 	Socket clientSocket;
+	String hostname;
+	String port;
 
 	ObjectInputStream objIn;
+	DataOutputStream out;
 
 	private void sendToPython() {
 		MusicProto.Music mProto = MusicProto.Music.newBuilder()
@@ -25,7 +28,18 @@ public class Servidor {
 			.build();
 		
 		System.out.println("Codificando objeto....\n\n");
-		System.out.println(mProto.toString());
+
+		try {
+			Socket pythonSocket = new Socket("127.0.0.1", 5555);
+			out = new DataOutputStream(pythonSocket.getOutputStream());
+
+			System.out.println(mProto.toByteArray().length);
+			out.write(mProto.toByteArray().length);
+			out.write(mProto.toByteArray());
+			
+		} catch (Exception e) {
+			//TODO: handle exception
+		}
 	}
 
 	private void execute() {
