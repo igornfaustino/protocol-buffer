@@ -12,7 +12,7 @@ public class Musica implements Serializable {
     private String nome;
     private String album;
     private int trackNro;
-    private Date data;
+    private Boolean onTheRadio;
 
     /** Construtor */
     public Musica(String n, String a, int t, Date d) {
@@ -30,8 +30,8 @@ public class Musica implements Serializable {
         return this.album;
     }
 
-    public Date getData() {
-        return this.data;
+    public Boolean isOnTheRadio() {
+        return this.onTheRadio;
     }
 
     public int getTrack() {
