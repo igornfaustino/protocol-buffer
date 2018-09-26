@@ -1,9 +1,9 @@
-from musica_pb2.py import Music
+from musica_pb2 import Music
 from datetime import datetime
 import socket
 
 HOST = ''              # Endereco IP do Servidor
-PORT = 5553            # Porta que o Servidor esta
+PORT = 5555            # Porta que o Servidor esta
 server_tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 orig = (HOST, PORT)
 server_tcp.bind(orig)
@@ -18,10 +18,10 @@ while True:
             if not msg: break
             music_list.ParseFromString(msg)
             for music in music_list:
-                print('Nome da música: ', music.nome)
-                print('Nome do álbum: ', music.album)
-                print('Número da faixa: ', music.trackNro)
-                print('Está nas rádios? ', music.onTheRadio)
+                print 'Nome da musica: ', music.nome
+                print 'Nome do album: ', music.album
+                print 'Numero da faixa: ', music.trackNro
+                print 'Esta nas radios ', music.onTheRadio
 
             print cliente, msg   
     except KeyboardInterrupt as ex:
