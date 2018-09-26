@@ -5,7 +5,7 @@ package protobuf;
 option java_package = "com.nfaustino.app.proto";
 option java_outer_classname = "MusicProto";
 
-message musica_proto {
+message Music {
     string nome = 1;
     string album = 2;
     int32 trackNro = 3;

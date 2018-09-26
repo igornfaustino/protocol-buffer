@@ -5,7 +5,6 @@ package com.nfaustino.app;
  */
 
 import java.net.*;
-import java.util.Date;
 import java.io.*;
 
 /**

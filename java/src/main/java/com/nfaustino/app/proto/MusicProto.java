@@ -14,8 +14,8 @@ public final class MusicProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface musica_protoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:protobuf.musica_proto)
+  public interface MusicOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protobuf.Music)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -49,18 +49,18 @@ public final class MusicProto {
     boolean getOnTheRadio();
   }
   /**
-   * Protobuf type {@code protobuf.musica_proto}
+   * Protobuf type {@code protobuf.Music}
    */
-  public  static final class musica_proto extends
+  public  static final class Music extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:protobuf.musica_proto)
-      musica_protoOrBuilder {
+      // @@protoc_insertion_point(message_implements:protobuf.Music)
+      MusicOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use musica_proto.newBuilder() to construct.
-    private musica_proto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Music.newBuilder() to construct.
+    private Music(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private musica_proto() {
+    private Music() {
       nome_ = "";
       album_ = "";
       trackNro_ = 0;
@@ -72,7 +72,7 @@ public final class MusicProto {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private musica_proto(
+    private Music(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -134,15 +134,15 @@ public final class MusicProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.nfaustino.app.proto.MusicProto.internal_static_protobuf_musica_proto_descriptor;
+      return com.nfaustino.app.proto.MusicProto.internal_static_protobuf_Music_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.nfaustino.app.proto.MusicProto.internal_static_protobuf_musica_proto_fieldAccessorTable
+      return com.nfaustino.app.proto.MusicProto.internal_static_protobuf_Music_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.nfaustino.app.proto.MusicProto.musica_proto.class, com.nfaustino.app.proto.MusicProto.musica_proto.Builder.class);
+              com.nfaustino.app.proto.MusicProto.Music.class, com.nfaustino.app.proto.MusicProto.Music.Builder.class);
     }
 
     public static final int NOME_FIELD_NUMBER = 1;
@@ -290,10 +290,10 @@ public final class MusicProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.nfaustino.app.proto.MusicProto.musica_proto)) {
+      if (!(obj instanceof com.nfaustino.app.proto.MusicProto.Music)) {
         return super.equals(obj);
       }
-      com.nfaustino.app.proto.MusicProto.musica_proto other = (com.nfaustino.app.proto.MusicProto.musica_proto) obj;
+      com.nfaustino.app.proto.MusicProto.Music other = (com.nfaustino.app.proto.MusicProto.Music) obj;
 
       boolean result = true;
       result = result && getNome()
@@ -329,69 +329,69 @@ public final class MusicProto {
       return hash;
     }
 
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseFrom(
+    public static com.nfaustino.app.proto.MusicProto.Music parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseFrom(
+    public static com.nfaustino.app.proto.MusicProto.Music parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseFrom(
+    public static com.nfaustino.app.proto.MusicProto.Music parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseFrom(
+    public static com.nfaustino.app.proto.MusicProto.Music parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseFrom(byte[] data)
+    public static com.nfaustino.app.proto.MusicProto.Music parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseFrom(
+    public static com.nfaustino.app.proto.MusicProto.Music parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseFrom(java.io.InputStream input)
+    public static com.nfaustino.app.proto.MusicProto.Music parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseFrom(
+    public static com.nfaustino.app.proto.MusicProto.Music parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseDelimitedFrom(java.io.InputStream input)
+    public static com.nfaustino.app.proto.MusicProto.Music parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseDelimitedFrom(
+    public static com.nfaustino.app.proto.MusicProto.Music parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseFrom(
+    public static com.nfaustino.app.proto.MusicProto.Music parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.nfaustino.app.proto.MusicProto.musica_proto parseFrom(
+    public static com.nfaustino.app.proto.MusicProto.Music parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -404,7 +404,7 @@ public final class MusicProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.nfaustino.app.proto.MusicProto.musica_proto prototype) {
+    public static Builder newBuilder(com.nfaustino.app.proto.MusicProto.Music prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -420,26 +420,26 @@ public final class MusicProto {
       return builder;
     }
     /**
-     * Protobuf type {@code protobuf.musica_proto}
+     * Protobuf type {@code protobuf.Music}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:protobuf.musica_proto)
-        com.nfaustino.app.proto.MusicProto.musica_protoOrBuilder {
+        // @@protoc_insertion_point(builder_implements:protobuf.Music)
+        com.nfaustino.app.proto.MusicProto.MusicOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.nfaustino.app.proto.MusicProto.internal_static_protobuf_musica_proto_descriptor;
+        return com.nfaustino.app.proto.MusicProto.internal_static_protobuf_Music_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.nfaustino.app.proto.MusicProto.internal_static_protobuf_musica_proto_fieldAccessorTable
+        return com.nfaustino.app.proto.MusicProto.internal_static_protobuf_Music_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.nfaustino.app.proto.MusicProto.musica_proto.class, com.nfaustino.app.proto.MusicProto.musica_proto.Builder.class);
+                com.nfaustino.app.proto.MusicProto.Music.class, com.nfaustino.app.proto.MusicProto.Music.Builder.class);
       }
 
-      // Construct using com.nfaustino.app.proto.MusicProto.musica_proto.newBuilder()
+      // Construct using com.nfaustino.app.proto.MusicProto.Music.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -471,17 +471,17 @@ public final class MusicProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.nfaustino.app.proto.MusicProto.internal_static_protobuf_musica_proto_descriptor;
+        return com.nfaustino.app.proto.MusicProto.internal_static_protobuf_Music_descriptor;
       }
 
       @java.lang.Override
-      public com.nfaustino.app.proto.MusicProto.musica_proto getDefaultInstanceForType() {
-        return com.nfaustino.app.proto.MusicProto.musica_proto.getDefaultInstance();
+      public com.nfaustino.app.proto.MusicProto.Music getDefaultInstanceForType() {
+        return com.nfaustino.app.proto.MusicProto.Music.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.nfaustino.app.proto.MusicProto.musica_proto build() {
-        com.nfaustino.app.proto.MusicProto.musica_proto result = buildPartial();
+      public com.nfaustino.app.proto.MusicProto.Music build() {
+        com.nfaustino.app.proto.MusicProto.Music result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -489,8 +489,8 @@ public final class MusicProto {
       }
 
       @java.lang.Override
-      public com.nfaustino.app.proto.MusicProto.musica_proto buildPartial() {
-        com.nfaustino.app.proto.MusicProto.musica_proto result = new com.nfaustino.app.proto.MusicProto.musica_proto(this);
+      public com.nfaustino.app.proto.MusicProto.Music buildPartial() {
+        com.nfaustino.app.proto.MusicProto.Music result = new com.nfaustino.app.proto.MusicProto.Music(this);
         result.nome_ = nome_;
         result.album_ = album_;
         result.trackNro_ = trackNro_;
@@ -533,16 +533,16 @@ public final class MusicProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.nfaustino.app.proto.MusicProto.musica_proto) {
-          return mergeFrom((com.nfaustino.app.proto.MusicProto.musica_proto)other);
+        if (other instanceof com.nfaustino.app.proto.MusicProto.Music) {
+          return mergeFrom((com.nfaustino.app.proto.MusicProto.Music)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.nfaustino.app.proto.MusicProto.musica_proto other) {
-        if (other == com.nfaustino.app.proto.MusicProto.musica_proto.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.nfaustino.app.proto.MusicProto.Music other) {
+        if (other == com.nfaustino.app.proto.MusicProto.Music.getDefaultInstance()) return this;
         if (!other.getNome().isEmpty()) {
           nome_ = other.nome_;
           onChanged();
@@ -572,11 +572,11 @@ public final class MusicProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.nfaustino.app.proto.MusicProto.musica_proto parsedMessage = null;
+        com.nfaustino.app.proto.MusicProto.Music parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.nfaustino.app.proto.MusicProto.musica_proto) e.getUnfinishedMessage();
+          parsedMessage = (com.nfaustino.app.proto.MusicProto.Music) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -788,51 +788,51 @@ public final class MusicProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:protobuf.musica_proto)
+      // @@protoc_insertion_point(builder_scope:protobuf.Music)
     }
 
-    // @@protoc_insertion_point(class_scope:protobuf.musica_proto)
-    private static final com.nfaustino.app.proto.MusicProto.musica_proto DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:protobuf.Music)
+    private static final com.nfaustino.app.proto.MusicProto.Music DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.nfaustino.app.proto.MusicProto.musica_proto();
+      DEFAULT_INSTANCE = new com.nfaustino.app.proto.MusicProto.Music();
     }
 
-    public static com.nfaustino.app.proto.MusicProto.musica_proto getDefaultInstance() {
+    public static com.nfaustino.app.proto.MusicProto.Music getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<musica_proto>
-        PARSER = new com.google.protobuf.AbstractParser<musica_proto>() {
+    private static final com.google.protobuf.Parser<Music>
+        PARSER = new com.google.protobuf.AbstractParser<Music>() {
       @java.lang.Override
-      public musica_proto parsePartialFrom(
+      public Music parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new musica_proto(input, extensionRegistry);
+        return new Music(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<musica_proto> parser() {
+    public static com.google.protobuf.Parser<Music> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<musica_proto> getParserForType() {
+    public com.google.protobuf.Parser<Music> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.nfaustino.app.proto.MusicProto.musica_proto getDefaultInstanceForType() {
+    public com.nfaustino.app.proto.MusicProto.Music getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_protobuf_musica_proto_descriptor;
+    internal_static_protobuf_Music_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_protobuf_musica_proto_fieldAccessorTable;
+      internal_static_protobuf_Music_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -842,10 +842,10 @@ public final class MusicProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014musica.proto\022\010protobuf\"Q\n\014musica_proto" +
-      "\022\014\n\004nome\030\001 \001(\t\022\r\n\005album\030\002 \001(\t\022\020\n\010trackNr" +
-      "o\030\003 \001(\005\022\022\n\nonTheRadio\030\004 \001(\010B%\n\027com.nfaus" +
-      "tino.app.protoB\nMusicProtob\006proto3"
+      "\n\014musica.proto\022\010protobuf\"J\n\005Music\022\014\n\004nom" +
+      "e\030\001 \001(\t\022\r\n\005album\030\002 \001(\t\022\020\n\010trackNro\030\003 \001(\005" +
+      "\022\022\n\nonTheRadio\030\004 \001(\010B%\n\027com.nfaustino.ap" +
+      "p.protoB\nMusicProtob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -859,11 +859,11 @@ public final class MusicProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_protobuf_musica_proto_descriptor =
+    internal_static_protobuf_Music_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_protobuf_musica_proto_fieldAccessorTable = new
+    internal_static_protobuf_Music_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_protobuf_musica_proto_descriptor,
+        internal_static_protobuf_Music_descriptor,
         new java.lang.String[] { "Nome", "Album", "TrackNro", "OnTheRadio", });
   }
 

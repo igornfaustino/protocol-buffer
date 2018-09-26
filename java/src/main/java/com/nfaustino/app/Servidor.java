@@ -1,46 +1,63 @@
 package com.nfaustino.app;
 
 import java.net.*;
+
+import com.nfaustino.app.proto.MusicProto;
+
 import java.io.*;
 
 /**
  * Servidor TCP que recebe dois objetos serializados
  */
 public class Servidor {
+	Musica m1;
+	ServerSocket serverSocket;
+	Socket clientSocket;
 
-    public static void main(String args[]) {
-        Musica m1, m2;
-        ServerSocket serverSocket;
-        Socket clientSocket;
+	ObjectInputStream objIn;
 
-        ObjectInputStream objIn;
+	private void sendToPython() {
+		MusicProto.Music mProto = MusicProto.Music.newBuilder()
+			.setNome(m1.getNome())
+			.setAlbum(m1.getAlbum())
+			.setTrackNro(m1.getTrack())
+			.setOnTheRadio(m1.isOnTheRadio())
+			.build();
+		
+		System.out.println("Codificando objeto....\n\n");
+		System.out.println(mProto.toString());
+	}
 
-        try {
-            System.out.println("Mapeando porta ...");
-            serverSocket = new ServerSocket(6666);
+	private void execute() {
 
-            System.out.println("Servidor aguardando conexoes ...");
-            clientSocket = serverSocket.accept();
+		try {
+			System.out.println("Mapeando porta ...");
+			serverSocket = new ServerSocket(6666);
 
-            System.out.println("Criando objetos de leitura/escrita ...");
-            objIn = new ObjectInputStream(clientSocket.getInputStream());
+			System.out.println("Servidor aguardando conexoes ...");
+			clientSocket = serverSocket.accept();
 
-            System.out.println("Aguardando objetos serializados ...");
-            m1 = (Musica) objIn.readObject();
-            m2 = (Musica) objIn.readObject();
+			System.out.println("Criando objetos de leitura/escrita ...");
+			objIn = new ObjectInputStream(clientSocket.getInputStream());
 
-            System.out.println("\nObjetos Recebidos\n");
-            System.out.println("\nMusica 1: " + "\n nome: " + m1.getNome() + "\n album: " + m1.getAlbum() + "\n faixa: "
-                    + m1.getTrack() + "\n data: " + m1.isOnTheRadio());
+			System.out.println("Aguardando objetos serializados ...");
+			m1 = (Musica) objIn.readObject();
 
-            System.out.println("\nMusica 2: " + "\n nome: " + m2.getNome() + "\n album: " + m2.getAlbum() + "\n faixa: "
-                    + m2.getTrack() + "\n data: " + m2.isOnTheRadio());
+			System.out.println("\nObjetos Recebidos\n");
+			System.out.println("\nMusica 1: " + "\n nome: " + m1.getNome() + "\n album: " + m1.getAlbum() + "\n faixa: "
+					+ m1.getTrack() + "\n data: " + m1.isOnTheRadio());
 
-            System.out.println("\nSistema finalizado!");
+			sendToPython();
+			System.out.println("\nSistema finalizado!");
 
-        } catch (Exception e) {
-            System.out.println(e);
-        } // catch
-    } // main
+		} catch (Exception e) {
+			System.out.println(e);
+		} // catch
+	}
+
+	public static void main(String args[]) {
+		Servidor s = new Servidor();
+		s.execute();
+	} // main
 
 }
