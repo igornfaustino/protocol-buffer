@@ -1,3 +1,4 @@
+package com.nfaustino.app;
 
 /*
  * Cliente.java
@@ -21,8 +22,8 @@ public class Cliente {
 
         try {
             System.out.println("Criando instancias da classe Musica ...\n");
-            a = new Musica("rock1", "so rock", 10, new Date());
-            b = new Musica("rock2", "so rock 2", 9, new Date());
+            a = new Musica("rock1", "so rock", 10, true);
+            b = new Musica("rock2", "so rock 2", 9, false);
 
             System.out.println("Conectando ao servidor ...\n");
             s = new Socket("localhost", 6666);

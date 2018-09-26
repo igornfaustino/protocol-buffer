@@ -1,3 +1,4 @@
+package com.nfaustino.app;
 
 /*
  * Pessoa.java
@@ -5,7 +6,6 @@
  */
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Musica implements Serializable {
 
@@ -15,11 +15,11 @@ public class Musica implements Serializable {
     private Boolean onTheRadio;
 
     /** Construtor */
-    public Musica(String n, String a, int t, Date d) {
+    public Musica(String n, String a, int t, Boolean o) {
         nome = n;
         album = a;
         trackNro = t;
-        data = d;
+        onTheRadio = o;
     }
 
     public String getNome() {

@@ -1,3 +1,5 @@
+package com.nfaustino.app;
+
 import java.net.*;
 import java.io.*;
 
@@ -29,10 +31,10 @@ public class Servidor {
 
             System.out.println("\nObjetos Recebidos\n");
             System.out.println("\nMusica 1: " + "\n nome: " + m1.getNome() + "\n album: " + m1.getAlbum() + "\n faixa: "
-                    + m1.getTrack() + "\n data: " + m1.getData());
+                    + m1.getTrack() + "\n data: " + m1.isOnTheRadio());
 
             System.out.println("\nMusica 2: " + "\n nome: " + m2.getNome() + "\n album: " + m2.getAlbum() + "\n faixa: "
-                    + m2.getTrack() + "\n data: " + m2.getData());
+                    + m2.getTrack() + "\n data: " + m2.isOnTheRadio());
 
             System.out.println("\nSistema finalizado!");
 
