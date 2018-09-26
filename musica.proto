@@ -1,10 +1,13 @@
-syntax="proto2";
+syntax="proto3";
 
-package proto;
+package protobuf;
+ 
+option java_package = "com.nfaustino.app.proto";
+option java_outer_classname = "MusicProto";
 
 message musica_proto {
-    required string nome = 1;
-    required string album = 2;
-    required int32 trackNro = 3;
-    required bool onTheRadio = 4;
+    string nome = 1;
+    string album = 2;
+    int32 trackNro = 3;
+    bool onTheRadio = 4;
 }
